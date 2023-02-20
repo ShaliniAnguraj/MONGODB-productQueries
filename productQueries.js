@@ -17,7 +17,10 @@ db.productQueries.find({}, { product_name: 1, product_material: 1 });
 db.productQueries.find({ id: "10" });
 
 //7.Find only the product name and product material
-//db.productQueries.findOne({},{product_name, product_material})
+db.productQueries.find(
+  {},
+  { _id: 0, id: 0, product_price: 0, product_color: 0 }
+);
 
 //8.Find all products which contain the value of soft in product material
 db.productQueries.find({ product_material: "Soft" });
