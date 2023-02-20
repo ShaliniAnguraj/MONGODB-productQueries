@@ -31,6 +31,7 @@ db.productQueries.find({
 });
 
 //10.Delete the products which product price value are same
+db.productQueries.deleteMany({ product_price: { $eq: 47 } });
 
 db.productQueries.insertMany([
   {
